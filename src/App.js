@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import AdminPanel from './pages/AdminPanel';
+import Infrastructure from './pages/Infrastructure';
+import Risks from './pages/Risks';
+import Strategy from './pages/Strategy';
+import Vendor from './pages/Vendor';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Sidebar />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/admin" replace />} />
+            <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/infrastructure" element={<Infrastructure />} />
+            <Route path="/risks" element={<Risks />} />
+            <Route path="/strategy" element={<Strategy />} />
+            <Route path="/vendor" element={<Vendor />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
