@@ -22,14 +22,6 @@ function Risks() {
           <h2>Активные угрозы</h2>
           {/* Содержимое карточки */}
         </div>
-
-        <div className="card">
-          <h2>Действия</h2>
-          <button className="btn btn-primary">
-            <i className="fas fa-shield-alt"></i>
-            Запустить сканирование
-          </button>
-        </div>
       </div>
     </div>
   );

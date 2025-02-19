@@ -86,13 +86,6 @@ function Sidebar() {
             <span>Поставщики</span>
           </NavLink>
         </nav>
-        
-        <div className="sidebar-footer">
-          <button className="btn btn-logout" onClick={handleLogout}>
-            <i className="fas fa-sign-out-alt"></i>
-            <span>Выйти</span>
-          </button>
-        </div>
       </div>
       
       {isMobileMenuOpen && (
