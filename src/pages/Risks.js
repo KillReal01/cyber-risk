@@ -5,6 +5,8 @@ function Risks() {
     <div>
       <div className="page-header">
         <h1>Управление рисками</h1>
+        <div className="header-actions">
+        </div>
       </div>
       
       <div className="dashboard-grid">
